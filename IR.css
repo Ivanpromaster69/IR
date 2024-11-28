@@ -28,21 +28,23 @@ body {
     display: flex;
     justify-content: space-around;
     gap: 30px;
+    flex-wrap: wrap;
 }
 .contentGame{
     display: flex;
     justify-content: center;
     padding: 2%;
     gap: 20px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     backdrop-filter: blur(5px);
     border: 2px solid aliceblue;
     border-radius: 50px;
     box-shadow: 0 4px 8px rgb(18, 4, 4);
 }
 .gameImg{
-    height: 250px;
-    width: 250px;
+    height: 200px;
+    width: 200px;
     border-radius: 50px;
     filter: blur(5px);
     box-shadow: 0 4px 8px rgb(18, 4, 4);
@@ -60,7 +62,32 @@ body {
     border: 5px solid red;
 }
 .nameGame{
-    width: 250px;
-    font-size: 30px;
+    width: 200px;
+    font-size: 20px;
     text-align: center;
+}
+@media(max-width: 1200px){
+    .gameImg{
+        height: 150px;
+        width: 150px;
+    }
+    .head{
+        width: 90%;
+    }
+}
+@media(max-width: 900px){
+    .gameImg{
+        height: 100px;
+        width: 100px;
+        gap: 10px;
+    }
+    .head{
+        font-size: 20px;
+        height: 50px;
+    }
+}
+@media(max-width: 600px){
+    .nameGame{
+        width: 150px;
+    }
 }
